@@ -536,4 +536,15 @@ nav a:hover{
     bottom: auto !important;
   }
 
+}@media(min-width: 769px){
+
+  .gallery-section{
+    padding-bottom: 14px !important;
+  }
+
+  .more-gallery{
+    display: inline-block !important;
+    margin-top: 8px !important;
+  }
+
 }
