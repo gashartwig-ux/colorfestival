@@ -644,10 +644,8 @@ nav a:hover{
 
 @media(min-width: 769px){
 
-  .instagram{
-    position: relative;
-    z-index: 20;
-    transform: translateY(-28px);
+  .gallery-section{
+    padding-top: 18px;
   }
 
 }
