@@ -548,3 +548,25 @@ nav a:hover{
   }
 
 }
+
+@media(min-width: 769px){
+
+  .hero{
+    min-height: 100vh !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .gallery-section{
+    position: relative !important;
+    bottom: auto !important;
+    padding-bottom: 22px !important;
+  }
+
+  .more-gallery{
+    display: inline-block !important;
+    margin-top: 10px !important;
+    margin-bottom: 4px !important;
+  }
+
+}
