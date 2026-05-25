@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Festival</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<section class="hero">
+
+  <div class="overlay"></div>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#videos">Aftermovies</a></li>
+        <li><a href="#fotos">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero-content">
+
+    <img src="logo.png" alt="Color Festival" class="logo">
+
+    <h1>
+      LA FIESTA COLOR<br>
+      MÁS GRANDE<br>
+      DE ARGENTINA
+    </h1>
+
+    <p>
+      Verano • Sunset • Música • Color • Gualeguaychú
+    </p>
+
+    <a href="#" class="btn">
+      Comprar Entradas
+    </a>
+
+    <div class="instagram">
+      <div class="insta-user">
+        @colorfestival.arg
+      </div>
+    </div>
+
+  </div>
+
+  <section id="fotos" class="gallery-section">
+
+    <div class="gallery-mini-title">
+      <span>GALERÍA</span>
+      <p>Experiencia Color</p>
+    </div>
+
+    <div class="mini-gallery">
+      <img src="fotos-galeria/foto1.jpg" alt="" onclick="openLightbox(this.src)">
+      <img src="fotos-galeria/foto2.jpg" alt="" onclick="openLightbox(this.src)">
+      <img src="fotos-galeria/foto3.jpg" alt="" onclick="openLightbox(this.src)">
+      <img src="fotos-galeria/foto4.jpg" alt="" onclick="openLightbox(this.src)">
+      <img src="fotos-galeria/foto5.jpg" alt="" onclick="openLightbox(this.src)">
+    </div>
+
+    <a href="#" class="more-gallery">
+      VER MÁS FOTOS
+    </a>
+
+  </section>
+
+</section>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+  <button class="lightbox-close" onclick="closeLightbox()">
+    ×
+  </button>
+
+  <button class="lightbox-arrow lightbox-prev" onclick="prevImage()">
+    ‹
+  </button>
+
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <button class="lightbox-arrow lightbox-next" onclick="nextImage()">
+    ›
+  </button>
+
+</div>
+
+<script>
+
+const galleryImages = [
+  "fotos-galeria/foto1.jpg",
+  "fotos-galeria/foto2.jpg",
+  "fotos-galeria/foto3.jpg",
+  "fotos-galeria/foto4.jpg",
+  "fotos-galeria/foto5.jpg"
+];
+
+let currentImageIndex = 0;
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+function openLightbox(src){
+
+  currentImageIndex = galleryImages.indexOf(src);
+
+  if(currentImageIndex < 0){
+    currentImageIndex = 0;
+  }
+
+  lightboxImg.src = galleryImages[currentImageIndex];
+
+  lightbox.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox(){
+
+  lightbox.classList.remove("active");
+
+  document.body.style.overflow = "";
+}
+
+function nextImage(){
+
+  currentImageIndex++;
+
+  if(currentImageIndex >= galleryImages.length){
+    currentImageIndex = 0;
+  }
+
+  lightboxImg.src = galleryImages[currentImageIndex];
+}
+
+function prevImage(){
+
+  currentImageIndex--;
+
+  if(currentImageIndex < 0){
+    currentImageIndex = galleryImages.length - 1;
+  }
+
+  lightboxImg.src = galleryImages[currentImageIndex];
+}
+
+document.addEventListener("keydown", function(event){
+
+  if(!lightbox.classList.contains("active")) return;
+
+  if(event.key === "Escape"){
+    closeLightbox();
+  }
+
+  if(event.key === "ArrowRight"){
+    nextImage();
+  }
+
+  if(event.key === "ArrowLeft"){
+    prevImage();
+  }
+
+});
+
+</script>
+
+</body>
+</html>
