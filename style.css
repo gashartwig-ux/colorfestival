@@ -508,3 +508,39 @@ nav a:hover{
   }
 
 }
+
+@media(min-width: 769px){
+
+  .gallery-section{
+    padding: 2px 6% 2px !important;
+  }
+
+  .gallery-mini-title{
+    margin-bottom: 2px !important;
+  }
+
+  .gallery-mini-title p{
+    display: none !important;
+  }
+
+  .mini-gallery{
+    padding-top: 6px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .mini-gallery img{
+    width: 92px !important;
+    height: 118px !important;
+    border-radius: 14px !important;
+  }
+
+  .more-gallery{
+    margin-top: 4px !important;
+    font-size: 11px !important;
+  }
+
+  .instagram{
+    margin-top: 10px !important;
+  }
+
+}
