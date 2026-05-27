@@ -686,6 +686,19 @@ nav a:hover{
     right: 8px;
   }
 
+  .gallery-years{
+  width: 100%;
+  gap: 6px;
+  padding: 0 6px;
+}
+
+.gallery-years a{
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  padding: 6px 9px;
+  white-space: nowrap;
+}
+
 }
 
 /* AJUSTE FINAL GALERIA PREMIUM */
