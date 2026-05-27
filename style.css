@@ -16,8 +16,11 @@ body{
 .hero{
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow: visible;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
 
   background-image: url("fondo.pantalla.png");
   background-size: cover;
@@ -30,7 +33,14 @@ body{
 .overlay{
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.12), rgba(0,0,0,0.65));
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.12),
+      rgba(0,0,0,0.65)
+    );
+
   z-index: 2;
 }
 
@@ -40,32 +50,41 @@ header{
   position: absolute;
   top: 22px;
   width: 100%;
+
   display: flex;
   justify-content: center;
+
   z-index: 10;
 }
 
-/* MENU */
+/* NAV */
 
 nav{
   background: rgba(255,255,255,0.08);
+
   backdrop-filter: blur(10px);
+
   border: 1px solid rgba(255,255,255,0.14);
+
   padding: 11px 26px;
+
   border-radius: 999px;
 }
 
 nav ul{
   display: flex;
   gap: 26px;
+
   list-style: none;
 }
 
 nav a{
   color: white;
   text-decoration: none;
+
   font-size: 15px;
   font-weight: 500;
+
   transition: 0.3s;
 }
 
@@ -78,8 +97,10 @@ nav a:hover{
 .hero-content{
   position: relative;
   z-index: 8;
+
   width: 100%;
-  height: calc(100vh - 230px);
+
+  grid-row: 1;
 
   display: flex;
   flex-direction: column;
@@ -87,13 +108,15 @@ nav a:hover{
   justify-content: flex-start;
 
   text-align: center;
-  padding: 125px 20px 0;
+
+  padding: 125px 20px 22px;
 }
 
 /* LOGO */
 
 .logo{
   width: 225px;
+
   margin-bottom: 18px;
 
   animation: logoFloat 4s ease-in-out infinite alternate;
@@ -109,8 +132,11 @@ nav a:hover{
 .hero h1{
   font-size: 58px;
   line-height: 0.95;
+
   font-weight: 900;
+
   margin-bottom: 18px;
+
   text-shadow: 0 0 24px rgba(0,0,0,0.65);
 }
 
@@ -118,8 +144,11 @@ nav a:hover{
 
 .hero p{
   font-size: 20px;
+
   margin-bottom: 34px;
+
   color: rgba(255,255,255,0.92);
+
   letter-spacing: 2px;
   word-spacing: 6px;
   line-height: 1.6;
@@ -129,12 +158,23 @@ nav a:hover{
 
 .btn{
   display: inline-block;
-  background: linear-gradient(45deg, #f4e033, #ff00aa);
+
+  background:
+    linear-gradient(
+      45deg,
+      #f4e033,
+      #ff00aa
+    );
+
   color: black;
   text-decoration: none;
+
   padding: 16px 36px;
+
   border-radius: 999px;
+
   font-weight: bold;
+
   transition: 0.3s;
 }
 
@@ -145,7 +185,8 @@ nav a:hover{
 /* INSTAGRAM */
 
 .instagram{
-  margin-top: 18px;
+  margin-top: 14px;
+
   position: relative;
   z-index: 9;
 }
@@ -153,62 +194,86 @@ nav a:hover{
 .insta-user{
   font-size: 17px;
   font-weight: bold;
+
   color: #f4e033;
 }
 
 /* GALERIA */
 
 .gallery-section{
-  position: absolute;
+  position: relative;
+
+  grid-row: 2;
+
   left: 0;
   right: 0;
-  bottom: 0;
+
   z-index: 6;
 
-  padding: 2px 6% 2px;
+  padding: 6px 6% 22px;
+
   text-align: center;
 
   background: rgba(255,255,255,0.07);
+
   backdrop-filter: blur(12px);
+
   border-top: 1px solid rgba(255,255,255,0.14);
+
   box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+
+  overflow: visible;
 }
 
 .gallery-mini-title{
-  margin-bottom: 4px;
+  margin-bottom: 0px;
 }
 
 .gallery-mini-title span{
   color: #f4e033;
+
   font-size: 12px;
   font-weight: 900;
+
   letter-spacing: 4px;
 }
 
 .gallery-mini-title p{
-  margin-top: 4px;
+  margin-top: 0px;
+
   font-size: 13px;
+
   color: rgba(255,255,255,0.82);
 }
+
+/* MINI GALERIA */
 
 .mini-gallery{
   display: flex;
   justify-content: center;
   gap: 14px;
+
   overflow-x: auto;
   overflow-y: visible;
-  padding-top: 12px;
+
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .mini-gallery img{
   width: 105px;
   height: 135px;
+
   object-fit: cover;
+
   border-radius: 16px;
+
   flex-shrink: 0;
+
   cursor: pointer;
+
   transition: 0.4s ease;
+
   border: 1px solid rgba(255,255,255,0.22);
 
   box-shadow:
@@ -217,36 +282,106 @@ nav a:hover{
 }
 
 .mini-gallery img:hover{
-  transform: translateY(-7px) scale(1.045);
-  filter: brightness(1.12) saturate(1.18);
+  transform: translateY(-4px) scale(1.045);
+
+  filter:
+    brightness(1.12)
+    saturate(1.18);
+
   border: 1px solid rgba(255,60,150,0.75);
 
   box-shadow:
-    0 18px 45px rgba(0,0,0,0.65),
+    0 14px 38px rgba(0,0,0,0.65),
     0 0 24px rgba(255,40,140,0.55),
     0 0 55px rgba(255,90,60,0.28);
+}
+
+/* DRIVE MENU */
+
+.gallery-drive-menu{
+  margin-top: 10px;
 }
 
 /* VER MAS */
 
 .more-gallery{
   display: inline-block;
-  margin-top: 10px;
+
+  margin-top: 4px;
+
   color: white;
   text-decoration: none;
+
   font-weight: bold;
   font-size: 13px;
+
   letter-spacing: 2px;
+
   border-bottom: 1px solid rgba(255,255,255,0.5);
+
   padding-bottom: 5px;
+}
+
+/* AÑOS */
+
+.gallery-years{
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.gallery-years a{
+  color: white;
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+
+  padding: 8px 16px;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      45deg,
+      rgba(244,224,51,0.16),
+      rgba(255,40,140,0.18)
+    );
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  box-shadow:
+    0 0 18px rgba(255,40,140,0.18),
+    inset 0 0 12px rgba(255,255,255,0.05);
+
+  transition: 0.3s ease;
+}
+
+.gallery-years a:hover{
+  color: #f4e033;
+
+  transform: translateY(-2px) scale(1.04);
+
+  border-color: rgba(255,60,150,0.55);
+
+  box-shadow:
+    0 0 24px rgba(255,40,140,0.42),
+    0 0 45px rgba(244,224,51,0.14);
 }
 
 /* LIGHTBOX */
 
 .lightbox{
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100vw;
   height: 100vh;
 
@@ -259,7 +394,11 @@ nav a:hover{
   padding: 40px;
 
   background:
-    radial-gradient(circle at center, rgba(255,40,140,0.12), transparent 38%),
+    radial-gradient(
+      circle at center,
+      rgba(255,40,140,0.12),
+      transparent 38%
+    ),
     rgba(3,3,8,0.90);
 
   backdrop-filter: blur(18px);
@@ -272,15 +411,17 @@ nav a:hover{
 .lightbox-content{
   width: 100%;
   height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* IMAGEN LIGHTBOX */
+/* IMG LIGHTBOX */
 
 .lightbox img{
   transition: 0.35s ease;
+
   width: auto;
   height: auto;
 
@@ -288,7 +429,9 @@ nav a:hover{
   max-height: 82vh;
 
   object-fit: contain;
+
   border-radius: 22px;
+
   border: 1px solid rgba(255,255,255,0.18);
 
   box-shadow:
@@ -297,37 +440,47 @@ nav a:hover{
     0 25px 80px rgba(0,0,0,0.75);
 }
 
-/* BOTON CERRAR */
+/* CLOSE */
 
 .lightbox-close{
   position: fixed;
+
   top: 24px;
   right: 28px;
+
   z-index: 100000;
 
   width: 44px;
   height: 44px;
+
   border-radius: 50%;
 
   border: 1px solid rgba(255,255,255,0.25);
+
   background: rgba(255,255,255,0.10);
+
   color: white;
 
   font-size: 30px;
+
   cursor: pointer;
+
   backdrop-filter: blur(10px);
+
   transition: 0.3s;
 }
 
 .lightbox-close:hover{
   transform: scale(1.08);
+
   background: rgba(255,40,140,0.22);
 }
 
-/* FLECHAS LIGHTBOX */
+/* FLECHAS */
 
 .lightbox-arrow{
   position: fixed;
+
   top: 50%;
   transform: translateY(-50%);
 
@@ -335,17 +488,22 @@ nav a:hover{
 
   width: 46px;
   height: 46px;
+
   border-radius: 50%;
 
   border: 1px solid rgba(255,255,255,0.14);
+
   background: rgba(255,255,255,0.06);
+
   color: white;
 
   font-size: 30px;
   font-weight: 300;
+
   cursor: pointer;
 
   backdrop-filter: blur(12px);
+
   transition: 0.28s ease;
 
   display: flex;
@@ -357,9 +515,13 @@ nav a:hover{
 
 .lightbox-arrow:hover{
   transform: translateY(-50%) scale(1.08);
+
   background: rgba(255,40,140,0.16);
+
   border: 1px solid rgba(255,80,150,0.38);
-  box-shadow: 0 0 28px rgba(255,40,140,0.28);
+
+  box-shadow:
+    0 0 28px rgba(255,40,140,0.28);
 }
 
 .lightbox-prev{
@@ -370,7 +532,7 @@ nav a:hover{
   right: 10%;
 }
 
-/* ANIMACION LOGO */
+/* ANIMACION */
 
 @keyframes logoFloat{
 
@@ -415,12 +577,12 @@ nav a:hover{
   }
 
   .hero-content{
-    height: calc(100vh - 215px);
     padding-top: 95px;
   }
 
   .logo{
     width: 165px;
+
     margin-top: 18px;
     margin-bottom: 22px;
   }
@@ -428,13 +590,17 @@ nav a:hover{
   .hero h1{
     font-size: 31px;
     line-height: 1;
+
     margin-bottom: 12px;
   }
 
   .hero p{
     font-size: 14px;
+
     margin-bottom: 20px;
+
     padding: 0 10px;
+
     letter-spacing: normal;
     word-spacing: normal;
   }
@@ -453,9 +619,10 @@ nav a:hover{
   }
 
   .gallery-section{
-    bottom: 0;
     padding: 10px 14px 8px;
+
     background: rgba(0,0,0,0.36);
+
     backdrop-filter: blur(9px);
   }
 
@@ -474,8 +641,10 @@ nav a:hover{
 
   .mini-gallery{
     justify-content: flex-start;
+
     gap: 10px;
-    padding-top: 8px;
+
+    padding-top: 5px;
     padding-bottom: 8px;
   }
 
@@ -489,6 +658,15 @@ nav a:hover{
     font-size: 11px;
   }
 
+  .gallery-years{
+    gap: 8px;
+  }
+
+  .gallery-years a{
+    font-size: 10px;
+    padding: 6px 11px;
+  }
+
   .lightbox{
     padding: 18px;
   }
@@ -496,6 +674,7 @@ nav a:hover{
   .lightbox img{
     max-width: 92vw;
     max-height: 76vh;
+
     border-radius: 18px;
   }
 
@@ -509,64 +688,108 @@ nav a:hover{
 
 }
 
-/* FIX DEFINITIVO HERO + GALERIA */
+/* AJUSTE FINAL GALERIA PREMIUM */
 
-@media(min-width: 769px){
-
-  .hero{
-    display: grid;
-    grid-template-rows: 1fr auto;
-  }
-
-  .hero-content{
-    grid-row: 1;
-    height: auto !important;
-    padding-top: 125px !important;
-    padding-bottom: 22px !important;
-  }
-
-  .instagram{
-    margin-top: 14px !important;
-    margin-bottom: 0 !important;
-  }
-
-  .gallery-section{
-    position: relative !important;
-    grid-row: 2;
-    bottom: auto !important;
-  }
-
-}@media(min-width: 769px){
-
-  .gallery-section{
-    padding-bottom: 22px !important;
-  }
-
-  .more-gallery{
-    display: inline-block !important;
-    margin-top: 8px !important;
-  }
-
+.gallery-section{
+  padding-top: 12px;
+  padding-bottom: 22px;
+  overflow: visible;
 }
 
-@media(min-width: 769px){
+.gallery-mini-title{
+  margin-bottom: 0;
+}
 
-  .hero{
-    min-height: 100vh !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
+.gallery-mini-title span{
+  display: block;
+  margin-bottom: 2px;
+}
 
-  .gallery-section{
-    position: relative !important;
-    bottom: auto !important;
-    padding-bottom: 22px !important;
-  }
+.gallery-mini-title p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-  .more-gallery{
-    display: inline-block !important;
-    margin-top: 10px !important;
-    margin-bottom: 4px !important;
-  }
+.mini-gallery{
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
 
+.mini-gallery img:hover{
+  transform: translateY(-4px) scale(1.045);
+}
+
+/* EDICIONES PREMIUM */
+
+.gallery-years{
+  margin-top: 12px;
+}
+
+.gallery-years a{
+  position: relative;
+  overflow: hidden;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+
+  padding: 8px 18px;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.08),
+      rgba(255,40,140,0.16),
+      rgba(244,224,51,0.10)
+    );
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  box-shadow:
+    0 0 18px rgba(255,40,140,0.20),
+    inset 0 0 18px rgba(255,255,255,0.04);
+
+  transition: 0.35s ease;
+}
+
+.gallery-years a::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+
+  width: 60%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.28),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+  transition: 0.55s ease;
+}
+
+.gallery-years a:hover{
+  color: #f4e033;
+
+  transform: translateY(-3px) scale(1.04);
+
+  border-color: rgba(255,60,150,0.55);
+
+  box-shadow:
+    0 0 26px rgba(255,40,140,0.42),
+    0 0 52px rgba(244,224,51,0.16);
+}
+
+.gallery-years a:hover::before{
+  left: 125%;
 }
