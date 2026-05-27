@@ -806,3 +806,24 @@ nav a:hover{
 .gallery-years a:hover::before{
   left: 125%;
 }
+
+@media(max-width: 768px){
+
+  .gallery-years{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .gallery-years a{
+    width: 135px;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+  }
+
+}
