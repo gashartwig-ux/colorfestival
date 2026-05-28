@@ -1,210 +1,360 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Color Festival</title>
 
   <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<section class="hero">
+  <!-- HERO -->
 
-  <div class="overlay"></div>
+  <section class="hero">
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#videos">Aftermovies</a></li>
-      <li><a href="#fotos">Galería</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+    <header class="site-header">
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#videos">Aftermovies</a></li>
+          <li><a href="#fotos">Galería</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <div class="hero-content">
+    <div class="hero-content">
 
-    <img src="logo.png" alt="Color Festival" class="logo">
+      <img src="logo.png" alt="Color Festival" class="logo">
 
-    <h1>
-      LA FIESTA COLOR<br>
-      MÁS GRANDE<br>
-      DE ARGENTINA
-    </h1>
+      <h1>
+        LA FIESTA COLOR<br>
+        MÁS GRANDE<br>
+        DE ARGENTINA
+      </h1>
 
-    <p>
-      Verano • Sunset • Música • Color • Gualeguaychú
-    </p>
+      <p>
+        Verano • Sunset • Música • Color • Gualeguaychú
+      </p>
 
-    <a href="#" class="btn">
-      Comprar Entradas
-    </a>
+      <a href="#" class="btn">
+        Comprar Entradas
+      </a>
 
-    <div class="instagram">
-      <div class="insta-user">
-        @colorfestival.arg
+      <div class="instagram">
+        <div class="insta-user">
+          @colorfestival.arg
+        </div>
       </div>
+
     </div>
-
-  </div>
-
-  <section id="fotos" class="gallery-section">
-
-    <div class="gallery-mini-title">
-      <span>GALERÍA</span>
-      <p>Experiencia Color</p>
-    </div>
-
-    <div class="mini-gallery">
-      <img src="fotos-galeria/foto1.jpg" alt="" onclick="openLightbox(this.src)">
-      <img src="fotos-galeria/foto2.jpg" alt="" onclick="openLightbox(this.src)">
-      <img src="fotos-galeria/foto3.jpg" alt="" onclick="openLightbox(this.src)">
-      <img src="fotos-galeria/foto4.jpg" alt="" onclick="openLightbox(this.src)">
-      <img src="fotos-galeria/foto5.jpg" alt="" onclick="openLightbox(this.src)">
-    </div>
-
-<div class="gallery-drive-menu">
-
-  
-
-<div class="gallery-drive-menu">
-
-
-  <div class="gallery-years">
-
-    <a href="https://drive.google.com/drive/folders/15Qs-b7B79BTDn6UulqdqrBzwJsXMrGzC?usp=drive_link"
-       target="_blank">
-       Edición 2026
-    </a>
-
-    <a href="https://drive.google.com/drive/folders/1YBaBC_cQjLdj_gNjbMlOVhTeQsXhtFjO?usp=drive_link"
-       target="_blank">
-       Edición 2025
-    </a>
-
-    <a href="https://drive.google.com/drive/folders/1IJqpsBIL1m687oYucCgwIi5nUVigPzYX?usp=drive_link"
-       target="_blank">
-       Edición 2024
-    </a>
-
-  </div>
-
-</div>
-
-</div>
 
   </section>
 
-</section>
+  <!-- EXPERIENCIA -->
 
-<!-- LIGHTBOX -->
+  <section id="experiencia" class="site-section experience-section">
 
-<div class="lightbox" id="lightbox">
+    <div class="section-card experience-box">
 
-  <button class="lightbox-close" onclick="closeLightbox()">
-    ×
-  </button>
+      <span class="section-kicker">
+        EXPERIENCIA
+      </span>
 
-  <button class="lightbox-arrow lightbox-prev" onclick="prevImage()">
-    ‹
-  </button>
+      <h2>
+        Color Festival
+      </h2>
 
-  <div class="lightbox-content">
-    <img id="lightbox-img" src="" alt="">
+      <p>
+        Hace más de 8 veranos soñamos con algo distinto.
+
+        <br><br>
+
+        Una fiesta en la playa.
+        Sunsets.
+        Música.
+        Colores.
+        Carnaval, que forma parte de la identidad de nuestra ciudad.
+        Y miles de personas viviendo una experiencia inolvidable.
+
+        <br><br>
+
+        Así nació Color Festival.
+
+        <br><br>
+
+        Edición tras edición seguimos creciendo,
+        sumando artistas, momentos únicos y una energía
+        que hoy ya forma parte del verano en Gualeguaychú.
+
+        <br><br>
+
+        Más que una fiesta,
+        Color Festival es una experiencia que se vive,
+        se siente y se recuerda.
+
+        <br><br>
+
+        <strong>
+          La Fiesta Color Más Grande de Argentina.
+        </strong>
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- GALERÍA -->
+
+  <section id="fotos" class="site-section gallery-wrapper">
+
+    <div class="section-card gallery-card">
+
+      <div class="gallery-mini-title">
+
+        <span class="section-kicker">
+          GALERÍA
+        </span>
+
+        <p>
+          Experiencia Color
+        </p>
+
+      </div>
+
+      <div class="mini-gallery">
+
+        <img src="fotos-galeria/foto1.jpg" alt="Color Festival foto 1" onclick="openLightbox(this.src)">
+        <img src="fotos-galeria/foto2.jpg" alt="Color Festival foto 2" onclick="openLightbox(this.src)">
+        <img src="fotos-galeria/foto3.jpg" alt="Color Festival foto 3" onclick="openLightbox(this.src)">
+        <img src="fotos-galeria/foto4.jpg" alt="Color Festival foto 4" onclick="openLightbox(this.src)">
+        <img src="fotos-galeria/foto5.jpg" alt="Color Festival foto 5" onclick="openLightbox(this.src)">
+
+      </div>
+
+      <div class="gallery-drive-menu">
+
+        <a href="https://drive.google.com/drive/folders/15Qs-b7B79BTDn6UulqdqrBzwJsXMrGzC?usp=drive_link"
+           target="_blank"
+           class="more-gallery">
+          VER MÁS FOTOS
+        </a>
+
+        <div class="gallery-years">
+
+          <a href="https://drive.google.com/drive/folders/15Qs-b7B79BTDn6UulqdqrBzwJsXMrGzC?usp=drive_link"
+             target="_blank">
+            Edición 2026
+          </a>
+
+          <a href="https://drive.google.com/drive/folders/1YBaBC_cQjLdj_gNjbMlOVhTeQsXhtFjO?usp=drive_link"
+             target="_blank">
+            Edición 2025
+          </a>
+
+          <a href="https://drive.google.com/drive/folders/1IJqpsBIL1m687oYucCgwIi5nUVigPzYX?usp=drive_link"
+             target="_blank">
+            Edición 2024
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- LOCATION -->
+
+  <section id="location" class="site-section location-section">
+
+    <div class="section-card location-box">
+
+      <span class="section-kicker">
+        LOCATION
+      </span>
+
+      <h2>
+        Solar del Este
+      </h2>
+
+      <p>
+        Un escenario único frente al río, donde la playa, el sunset,
+        la música y el color se encuentran para vivir una experiencia inolvidable.
+      </p>
+
+      <p class="location-place">
+        Gualeguaychú • Entre Ríos • Argentina
+      </p>
+
+      <div class="map-box">
+        <iframe
+          src="https://www.google.com/maps?q=Solar%20del%20Este%20Gualeguaych%C3%BA&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa Solar del Este Gualeguaychú">
+        </iframe>
+      </div>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Solar%20del%20Este%20Gualeguaych%C3%BA"
+        target="_blank"
+        class="location-btn">
+        CÓMO LLEGAR
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer id="contacto" class="footer">
+
+    <div class="footer-box">
+
+      <div class="footer-brand">
+        <img src="logo.png" alt="Color Festival">
+        <h3>Color Festival</h3>
+        <p>La Fiesta Color Más Grande de Argentina</p>
+      </div>
+
+      <div class="footer-info">
+        <h4>Contacto</h4>
+
+        <a href="mailto:colorfestival.arg@gmail.com">
+          colorfestival.arg@gmail.com
+        </a>
+
+        <a href="https://wa.me/5493446652483" target="_blank">
+          WhatsApp: 3446 - 652483
+        </a>
+
+        <p>Argentina • Entre Ríos • Gualeguaychú</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Redes</h4>
+
+        <a href="https://www.instagram.com/colorfestival.arg/" target="_blank">
+          Instagram
+        </a>
+
+        <a href="#" target="_blank">
+          YouTube
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Color Festival — Todos los derechos reservados.
+    </div>
+
+  </footer>
+
+  <!-- LIGHTBOX -->
+
+  <div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" onclick="closeLightbox()">
+      ×
+    </button>
+
+    <button class="lightbox-arrow lightbox-prev" onclick="prevImage()">
+      ‹
+    </button>
+
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <button class="lightbox-arrow lightbox-next" onclick="nextImage()">
+      ›
+    </button>
+
   </div>
 
-  <button class="lightbox-arrow lightbox-next" onclick="nextImage()">
-    ›
-  </button>
+  <script>
+    const galleryImages = [
+      "fotos-galeria/foto1.jpg",
+      "fotos-galeria/foto2.jpg",
+      "fotos-galeria/foto3.jpg",
+      "fotos-galeria/foto4.jpg",
+      "fotos-galeria/foto5.jpg"
+    ];
 
-</div>
+    let currentImageIndex = 0;
 
-<script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-const galleryImages = [
-  "fotos-galeria/foto1.jpg",
-  "fotos-galeria/foto2.jpg",
-  "fotos-galeria/foto3.jpg",
-  "fotos-galeria/foto4.jpg",
-  "fotos-galeria/foto5.jpg"
-];
+    function openLightbox(src) {
+      const imageName = src.split("/").pop();
+      currentImageIndex = galleryImages.findIndex(image => image.endsWith(imageName));
 
-let currentImageIndex = 0;
+      if (currentImageIndex < 0) {
+        currentImageIndex = 0;
+      }
 
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = galleryImages[currentImageIndex];
+      lightbox.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
 
-function openLightbox(src){
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "";
+    }
 
-  currentImageIndex = galleryImages.indexOf(src);
+    function nextImage() {
+      currentImageIndex++;
 
-  if(currentImageIndex < 0){
-    currentImageIndex = 0;
-  }
+      if (currentImageIndex >= galleryImages.length) {
+        currentImageIndex = 0;
+      }
 
-  lightboxImg.src = galleryImages[currentImageIndex];
+      lightboxImg.src = galleryImages[currentImageIndex];
+    }
 
-  lightbox.classList.add("active");
+    function prevImage() {
+      currentImageIndex--;
 
-  document.body.style.overflow = "hidden";
-}
+      if (currentImageIndex < 0) {
+        currentImageIndex = galleryImages.length - 1;
+      }
 
-function closeLightbox(){
+      lightboxImg.src = galleryImages[currentImageIndex];
+    }
 
-  lightbox.classList.remove("active");
+    document.addEventListener("keydown", function(event) {
+      if (!lightbox.classList.contains("active")) return;
 
-  document.body.style.overflow = "";
-}
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
 
-function nextImage(){
+      if (event.key === "ArrowRight") {
+        nextImage();
+      }
 
-  currentImageIndex++;
-
-  if(currentImageIndex >= galleryImages.length){
-    currentImageIndex = 0;
-  }
-
-  lightboxImg.src = galleryImages[currentImageIndex];
-}
-
-function prevImage(){
-
-  currentImageIndex--;
-
-  if(currentImageIndex < 0){
-    currentImageIndex = galleryImages.length - 1;
-  }
-
-  lightboxImg.src = galleryImages[currentImageIndex];
-}
-
-document.addEventListener("keydown", function(event){
-
-  if(!lightbox.classList.contains("active")) return;
-
-  if(event.key === "Escape"){
-    closeLightbox();
-  }
-
-  if(event.key === "ArrowRight"){
-    nextImage();
-  }
-
-  if(event.key === "ArrowLeft"){
-    prevImage();
-  }
-
-});
-
-</script>
+      if (event.key === "ArrowLeft") {
+        prevImage();
+      }
+    });
+  </script>
 
 </body>
 </html>
