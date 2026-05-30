@@ -1482,3 +1482,333 @@ body{
     0 0 10px rgba(255,255,255,.65),
     0 0 18px rgba(255,0,170,.18);
 }
+
+
+/* ==========================================
+   MOBILE — FONDO CON IDENTIDAD DESKTOP
+========================================== */
+
+@media(max-width:768px){
+
+  body{
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.04)
+      ),
+      url("fondo.pantalla.png"),
+      url("fondo.pantalla.png");
+
+    background-size:
+      cover,
+      auto 80vh,
+      auto 80vh;
+
+    background-position:
+      center top,
+      left top,
+      right top;
+
+    background-repeat:
+      repeat-y,
+      repeat-y,
+      repeat-y;
+
+    background-attachment:
+      scroll,
+      scroll,
+      scroll;
+  }
+
+}
+
+/* ==================================================
+   FINAL HERO / LOGO — PRE SECTION VIDEOS
+   Objetivo: recuperar presencia premium del logo
+   y mejorar lectura mobile sin tocar desktop.
+================================================== */
+
+.logo-wrap{
+  position: relative;
+  z-index: 4;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.logo-wrap::before{
+  content: "";
+  position: absolute;
+  inset: 8% 2% 0;
+  z-index: -1;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,.72) 0%,
+      rgba(255,0,170,.42) 30%,
+      rgba(255,138,0,.26) 52%,
+      rgba(53,18,95,.16) 70%,
+      transparent 78%
+    );
+  filter: blur(24px);
+  transform: scale(1.08);
+  opacity: .95;
+  pointer-events: none;
+}
+
+.logo{
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+  filter:
+    drop-shadow(0 0 10px rgba(255,255,255,.55))
+    drop-shadow(0 0 24px rgba(255,0,170,.52))
+    drop-shadow(0 0 52px rgba(255,0,170,.34))
+    drop-shadow(0 10px 20px rgba(53,18,95,.18));
+}
+
+.hero h1{
+  color: var(--cf-violet);
+  text-shadow:
+    0 3px 0 rgba(255,255,255,.58),
+    0 12px 24px rgba(53,18,95,.18),
+    0 0 16px rgba(255,255,255,.28);
+}
+
+.hero-color{
+  background: linear-gradient(90deg, var(--cf-pink), #ff4e73, var(--cf-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Mobile: el fondo ya está correcto; el ajuste es de contraste. */
+@media(max-width: 768px){
+
+  .logo-wrap{
+    margin-top: 18px;
+    margin-bottom: 14px;
+  }
+
+  .logo-wrap::before{
+    inset: 0 -10% -4%;
+    filter: blur(20px);
+    transform: scale(1.08);
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(255,255,255,.82) 0%,
+        rgba(255,0,170,.38) 32%,
+        rgba(255,138,0,.24) 54%,
+        transparent 76%
+      );
+  }
+
+  .logo{
+    margin-top: 0;
+    margin-bottom: 0;
+    filter:
+      drop-shadow(0 0 8px rgba(255,255,255,.60))
+      drop-shadow(0 0 22px rgba(255,0,170,.42))
+      drop-shadow(0 0 40px rgba(255,138,0,.22))
+      drop-shadow(0 8px 14px rgba(53,18,95,.18));
+  }
+
+  .hero h1{
+    color: #ffffff;
+    -webkit-text-stroke: .45px rgba(53,18,95,.48);
+    text-shadow:
+      0 1px 0 rgba(53,18,95,.35),
+      0 0 10px rgba(255,255,255,.55),
+      0 3px 12px rgba(53,18,95,.35),
+      0 0 20px rgba(255,0,170,.16);
+  }
+
+  .hero-color{
+    background: none;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    text-shadow:
+      0 1px 0 rgba(53,18,95,.40),
+      0 0 12px rgba(255,255,255,.58),
+      0 0 20px rgba(255,0,170,.20);
+  }
+
+  .hero p{
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow:
+      0 1px 4px rgba(53,18,95,.42),
+      0 0 12px rgba(255,255,255,.40);
+  }
+
+  .insta-user{
+    color: #ffffff;
+    text-shadow:
+      0 1px 4px rgba(53,18,95,.50),
+      0 0 14px rgba(255,255,255,.42),
+      0 0 20px rgba(255,0,170,.18);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .hero h1{
+    color: #2b0b4f;
+
+    text-shadow:
+      0 2px 0 rgba(255,255,255,.75),
+      0 0 10px rgba(255,255,255,.65),
+      0 6px 18px rgba(255,0,170,.22);
+  }
+
+  .hero-color{
+    background: none;
+    color: #ff00aa;
+
+    text-shadow:
+      0 2px 0 rgba(255,255,255,.70),
+      0 0 12px rgba(255,0,170,.35);
+  }
+
+  .hero p{
+    color: #35125f;
+
+    text-shadow:
+      0 1px 0 rgba(255,255,255,.75),
+      0 0 10px rgba(255,255,255,.55);
+  }
+
+  .insta-user{
+    color: #ff00aa;
+
+    text-shadow:
+      0 1px 0 rgba(255,255,255,.75),
+      0 0 12px rgba(255,0,170,.35);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .hero h1{
+    color: #2b0b4f;
+
+    text-shadow:
+      0 2px 0 rgba(255,255,255,.75),
+      0 0 10px rgba(255,255,255,.70),
+      0 8px 18px rgba(53,18,95,.18);
+  }
+
+  .hero-color{
+    background: linear-gradient(90deg, #ff00aa, #ff4e73, #ff8a00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow: none;
+  }
+
+  .insta-user{
+    color: #ff00aa;
+
+    background: rgba(255,255,255,.58);
+    border: 1px solid rgba(255,255,255,.75);
+    border-radius: 999px;
+
+    padding: 6px 14px;
+
+    box-shadow:
+      0 0 14px rgba(255,0,170,.28),
+      0 6px 16px rgba(53,18,95,.10);
+  }
+
+}
+
+/* ==========================================
+   AJUSTE FINAL MOBILE HERO
+========================================== */
+
+@media(max-width:768px){
+
+  .hero-color{
+    background: linear-gradient(
+      90deg,
+      #ff0088,
+      #ff4e73,
+      #ff7a00
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: saturate(1.25) contrast(1.12);
+  }
+
+  .insta-user{
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+
+    color: #35125f;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    text-shadow:
+      0 1px 6px rgba(255,255,255,.65);
+  }
+
+}
+
+/* AJUSTE FINAL COLOR HERO MOBILE */
+
+@media(max-width:768px){
+
+  .hero h1 .hero-color{
+    background: linear-gradient(
+      90deg,
+      #ff00aa 0%,
+      #ff3b7f 45%,
+      #ff8a00 100%
+    ) !important;
+
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+
+    filter: saturate(1.6) contrast(1.25) !important;
+    text-shadow: none !important;
+  }
+
+}
+
+
+.logo-glow::before{
+  background: radial-gradient(
+    circle,
+    rgba(255,0,170,.45),
+    rgba(255,138,0,.22),
+    transparent 70%
+  );
+}
+
+
+.footer-bottom{
+
+  color: #ffffff !important;
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,.35),
+    0 1px 6px rgba(53,18,95,.45);
+
+  font-weight: 600;
+}
