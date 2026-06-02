@@ -2005,3 +2005,82 @@ body{
     border-radius: 20px;
   }
 }
+
+/* VIDEOS V2 — YEARS */
+
+.video-years{
+  margin: 8px auto 28px;
+
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.video-years a{
+  position: relative;
+  overflow: hidden;
+
+  padding: 10px 24px;
+  border-radius: 999px;
+
+  color: #35125f;
+
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  background: rgba(255,255,255,.54);
+
+  border: 1px solid rgba(255,255,255,.85);
+
+  box-shadow:
+    0 0 18px rgba(255,0,170,.22),
+    0 7px 20px rgba(53,18,95,.08),
+    inset 0 0 18px rgba(255,255,255,.25);
+
+  transition: .35s ease;
+}
+
+.video-years a:hover{
+  color: #ff00aa;
+
+  transform: translateY(-3px) scale(1.04);
+
+  border-color: rgba(255,0,170,.45);
+
+  box-shadow:
+    0 0 24px rgba(255,0,170,.38),
+    0 0 50px rgba(255,138,0,.16);
+}
+
+@media(max-width:768px){
+
+  .video-years{
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .video-years a{
+    width: 90px;
+    padding: 9px 10px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+}
+
+/* FIX GALERÍA — MOSTRAR TODAS LAS FOTOS */
+
+.mini-gallery{
+  justify-content: flex-start !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  scroll-behavior: smooth;
+}
+
+.mini-gallery img{
+  flex: 0 0 auto !important;
+}
